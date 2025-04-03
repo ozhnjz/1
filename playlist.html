@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <link rel="icon" href="icons/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="playlist.css">
+</head>
+<body>
+    <div class="container">
+        <div class="music-cover" id="coverImage"></div>
+        <div class="song-name">Welcome back</div>
+        <div class="artist-name">ixumirei</div>
+        <div class="controls-container">
+            <img src="icons/loopinactive.png" alt="Loop" id="loopBtn">
+            <img src="icons/autoplayinactive.png" alt="Autoplay" id="autoplayBtn">
+        </div>
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+            <div class="progress-time time-left" id="timeLeft">0:00</div>
+            <div class="progress-time time-right" id="timeRight">4:20</div>
+        </div>
+        <div class="image-buttons">
+            <img src="icons/previous.png" alt="Previous" id="prevBtn">
+            <img src="icons/rewind.png" alt="Rewind" id="rewindBtn">
+            <img id="playPauseBtn" src="icons/play.png" alt="Play/Pause">
+            <img src="icons/forward.png" alt="Forward" id="forwardBtn">
+            <img src="icons/next.png" alt="Next" id="nextBtn">
+        </div>
+        <div class="playlist">
+            <div class="playlist-item" onclick="selectSong(0)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Eternal</div>
+                    <div class="artist">TOKiMONSTA</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(1)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Lucky U</div>
+                    <div class="artist">TOKiMONSTA, Gavin Turek</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(2)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">On Sum</div>
+                    <div class="artist">TOKiMONSTA, Anderson .Paak, Rae Khalil</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(3)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Warm Water (Interlude)</div>
+                    <div class="artist">TOKiMONSTA</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(4)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Switch It</div>
+                    <div class="artist">TOKiMONSTA, Cakes da Killa, GAWD</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(5)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Feel It</div>
+                    <div class="artist">TOKiMONSTA, grouptherapy</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(6)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Enjoy Your Life</div>
+                    <div class="artist">TOKiMONSTA, Oby Onyioha</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(7)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Corazón ／ Death By Disco Pt 2</div>
+                    <div class="artist">TOKiMONSTA</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(8)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">For You</div>
+                    <div class="artist">TOKiMONSTA, Kaelin Ellis</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(9)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Sci Fi</div>
+                    <div class="artist">TOKiMONSTA, Mez</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(10)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Say Tell Me</div>
+                    <div class="artist">TOKiMONSTA</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(11)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Reverie</div>
+                    <div class="artist">TOKiMONSTA</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(12)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">All In</div>
+                    <div class="artist">TOKiMONSTA, AMAKA</div>
+                </div>
+            </div>
+            <div class="playlist-item" onclick="selectSong(13)">
+                <img src="songs/cover.jpg" onerror="this.style.display='none'">
+                <div>
+                    <div class="song-title">Infinity's Embrace</div>
+                    <div class="artist">TOKiMONSTA</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="playlist.js"></script>
+</body>
+</html>

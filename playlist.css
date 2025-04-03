@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'League Spartan';
+    src: url('fonts/LeagueSpartan-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #151514;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;
+}
+.container {
+    width: 380px;
+    height: 730px;
+    background-color: #1A1A19;
+    border: 4px solid #424242;
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+.container::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #6C6C6C;
+    border-radius: 2px;
+    z-index: -1;
+}
+.container::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 4px solid #424242;
+    border-radius: 2px;
+    z-index: -2;
+}
+.music-cover {
+    width: 267px;
+    height: 267px;
+    background-image: url('icons/avatar.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+}
+.song-name {
+    font-size: 18px;
+    margin-top: 285px;
+    color: #e8e0f5;
+    user-select: none;
+}
+.artist-name {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #a08fbd;
+    user-select: none;
+}
+.song-name, .artist-name, .music-cover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.song-name.fade, .artist-name.fade, .music-cover.fade {
+    opacity: 0;
+}
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.controls-container img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.controls-container img:hover {
+    transform: scale(1.05);
+}
+.progress-container {
+    width: 90%;
+    height: 10px;
+    background-color: #444;
+    border-radius: 3px;
+    margin-top: 20px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #e8e0f5;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+.progress-time {
+    position: absolute;
+    top: 20px;
+    font-size: 12px;
+    color: #aaa;
+    user-select: none;
+}
+.time-left {
+    left: 0;
+}
+.time-right {
+    right: 0;
+}
+.image-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image-buttons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+.image-buttons img:hover {
+    transform: scale(1.08);
+}
+.playlist {
+    margin-top: 30px;
+    text-align: left;
+    max-height: 210px;
+    overflow-y: scroll;
+    padding: 0 20px;
+    scrollbar-width: none;
+}
+.playlist::-webkit-scrollbar {
+    display: none;
+}
+.playlist-item {
+    display: flex;
+    align-items: center;
+    background-color: #272726;
+    border: 2px solid #353534;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.playlist-item:hover {
+    background-color: #353534;
+}
+.playlist-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+.playlist-item .song-title {
+    font-size: 16px;
+    color: #e8e0f5;
+}
+.playlist-item .artist {
+    font-size: 12px;
+    color: #a08fbd;
+}
+.playing {
+    background-color: #1a1a19 !important;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 342px;
+        height: 657px;
+    }
+
+    .music-cover {
+        width: 240.3px;
+        height: 240.3px;
+    }
+
+    .song-name {
+        font-size: 16.2px;
+        margin-top: 256.5px;
+    }
+
+    .artist-name {
+        font-size: 12.6px;
+    }
+
+    .controls-container img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .progress-container {
+        height: 9px;
+    }
+
+    .progress-time {
+        font-size: 10.8px;
+    }
+
+    .image-buttons img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .playlist {
+        margin-top: 27px;
+        padding: 0 18px;
+        max-height: 189px;
+        overflow-y: auto;
+    }
+
+    .playlist-item {
+        padding: 9px;
+    }
+
+    .playlist-item img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .playlist-item .song-title {
+        font-size: 14.4px;
+    }
+
+    .playlist-item .artist {
+        font-size: 10.8px;
+    }
+}
